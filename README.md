@@ -8,3 +8,7 @@
     - nem ad vissza értéket
     - nincs paramétere
     - a tömb elemeit vesszõvel elválasztva egy sorba a consol-ra írja
+## Összegzés
+- Osszegzes() metódus létrehozása
+- Összegzés tétele a tömbön
+- Eredmény kiírása a console-ra
