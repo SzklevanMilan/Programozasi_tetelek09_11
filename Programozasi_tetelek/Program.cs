@@ -39,26 +39,16 @@ namespace Programozasi_tetelek
             }
             Console.WriteLine("{0}db szám osztható 3-al a tömbben.", db);
         }
-
-        static void Main(string[] args)
-        {
-            TombKiiras();
-            Osszegzes();
-            Megszamolas();
-            Eldontes();
-            Console.ReadKey();
-        }
-
-        private static void Eldontes()
+         static void Eldontes()
         {
             //bool igaz = true;
             int i = 0;
-            while (i<tomb.Length && tomb[i] != 69)
+            while (i < tomb.Length && tomb[i] != 69)
             {
                 //igaz = true;
                 i++;
             }
-            if ( i < tomb.Length)
+            if (i < tomb.Length)
             {
                 Console.WriteLine("Van 69-es szám.");
             }
@@ -66,6 +56,26 @@ namespace Programozasi_tetelek
             {
                 Console.WriteLine("Nincs 69-es szám");
             }
+        }
+
+         static void Kivalasztas()
+        {
+            int i = 1;
+            while (tomb[i] != 50)
+            {
+                i++;
+            }
+            Console.WriteLine("Az 50 a(z) {0} helyen van.", i+1);
+        }
+
+        static void Main(string[] args)
+        {
+            TombKiiras();
+            Osszegzes();
+            Megszamolas();
+            Eldontes();
+            Kivalasztas();
+            Console.ReadKey();
         }
     }
 }
