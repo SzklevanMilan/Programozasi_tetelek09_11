@@ -27,14 +27,25 @@ namespace Programozasi_tetelek
             }
             Console.WriteLine("A tömb összege: {0}.", s);
         }
+         static void Megszamolas()
+        {
+            int s = 0;
+            for (int i = 0; i < tomb.Length; i++)
+            {
+                if (tomb[i] % 3 == 0)
+                {
+                    s++;
+                }
+            }
+            Console.WriteLine("{0}db szám osztható 3-al.", s);
+        }
 
         static void Main(string[] args)
         {
             TombKiiras();
             Osszegzes();
+            Megszamolas();
             Console.ReadKey();
         }
-
-
     }
 }
