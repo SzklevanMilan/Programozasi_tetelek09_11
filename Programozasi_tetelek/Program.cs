@@ -60,7 +60,7 @@ namespace Programozasi_tetelek
 
          static void Kivalasztas()
         {
-            int i = 1;
+            int i = 0;
             while (tomb[i] != 50)
             {
                 i++;
@@ -75,7 +75,25 @@ namespace Programozasi_tetelek
             Megszamolas();
             Eldontes();
             Kivalasztas();
+            Kereses();
             Console.ReadKey();
+        }
+
+        private static void Kereses()
+        {
+            int i = 0;
+            while (i < tomb.Length && tomb[i] != 50)
+            {
+                i++;
+            }
+            if (i < tomb.Length)
+            {
+                Console.WriteLine("Van 50 a tömbbe és a {0}. elem",i+1);
+            }
+            else
+            {
+                Console.WriteLine("Sajnos nincs a tömbbe.");
+            }
         }
     }
 }
