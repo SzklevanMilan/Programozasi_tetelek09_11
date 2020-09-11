@@ -67,6 +67,35 @@ namespace Programozasi_tetelek
             }
             Console.WriteLine("Az 50 a(z) {0} helyen van.", i+1);
         }
+         static void Kereses()
+        {
+            int i = 0;
+            while (i < tomb.Length && tomb[i] != 50)
+            {
+                i++;
+            }
+            if (i < tomb.Length)
+            {
+                Console.WriteLine("Van 50 a tömbbe és a {0}. elem", i + 1);
+            }
+            else
+            {
+                Console.WriteLine("Sajnos nincs a tömbbe.");
+            }
+        }
+         static void Maximum()
+        {
+            int max = tomb[0];
+            for (int i = 0; i < tomb.Length; i++)
+            {
+                if (tomb[i] > max)
+                {
+                    max = tomb[i];
+                }
+            }
+            Console.WriteLine("A legnagyobb elem a(z): {0}", max);
+
+        }
 
         static void Main(string[] args)
         {
@@ -76,24 +105,8 @@ namespace Programozasi_tetelek
             Eldontes();
             Kivalasztas();
             Kereses();
+            Maximum();
             Console.ReadKey();
-        }
-
-        private static void Kereses()
-        {
-            int i = 0;
-            while (i < tomb.Length && tomb[i] != 50)
-            {
-                i++;
-            }
-            if (i < tomb.Length)
-            {
-                Console.WriteLine("Van 50 a tömbbe és a {0}. elem",i+1);
-            }
-            else
-            {
-                Console.WriteLine("Sajnos nincs a tömbbe.");
-            }
         }
     }
 }
